@@ -1,40 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getAll } from './action-creators/posts';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Posts from './Posts';
 import Post from './Post';
+import CreatePostForm from './CreatePostForm';
 
 
-class App extends Component {
+export default class App extends Component {
 
   render() {
-    console.log("this.state", this.state)
     return (
       <div className="App">
+
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Fair Message Board</h1>
         </header>
+
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Posts} />
+            <Route exact path="/posts" component={Posts} />
             <Route path="/posts/:id" component={Post} />
+            <Route path="/create-post" component={CreatePostForm} />
+            <Redirect from="/" to="/posts" />
           </Switch>
         </BrowserRouter>
+
       </div>
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    posts: state.posts.posts
-  }
-};
-
-const mapDispatch ={ getAll }
-
-export default connect(mapStateToProps, mapDispatch)(App)
