@@ -3,22 +3,30 @@ import { connect } from 'react-redux';
 import { getAll } from './action-creators/posts';
 
 class Posts extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.getAll();
   }
 
   render() {
     console.log("this.props", this.props);
+    const posts = this.props.posts.posts;
 
-    if (!this.props.posts || this.props.posts.length === 0) {
+    if (!posts || posts.length === 0) {
       return <div>There's no post.</div>
     }
 
     return (
-      <div>
+      <div className="list-group">
         {
-          this.props.posts.map(post => {
-            return (<div>{post}</div>)
+          posts.map((post, idx) => {
+            return <a key={`post${idx}`} className="list-group-item list-group-item-action flex-column align-items-start">
+              <div className="d-flex w-100 justify-content-between">
+                <h5 className="mb-1">{post.title}</h5>
+                <small>{post.comments.length} comments</small>
+              </div>
+              <p className="mb-1">{post.message}</p>
+              <small> ✍ {post.author}</small>
+            </a>
           })
         }
       </div>
@@ -26,12 +34,7 @@ class Posts extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    posts: state.posts.posts
-  }
-};
+export default connect(
+  ({ posts }) => ({ posts: posts }),
+  {getAll},)(Posts)
 
-const mapDispatch ={ getAll }
-
-export default connect(mapStateToProps, mapDispatch)(Posts)

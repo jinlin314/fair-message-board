@@ -7,6 +7,6 @@ export const GET_POST = 'GET_POST';
 //
 // /* --------------    ACTION CREATORS    ----------------- */
 //
-export const getAll = (posts) => ({ type: GET_ALL_POSTS, posts })
+export const getAll = () => ({ type: GET_ALL_POSTS })
 export const createPost = (post) => ({ type: CREATE_POST, post })
 export const getPost = (post) => ({ type: GET_POST, post })

@@ -1,0 +1,28 @@
+.CreatePostForm {
+    padding: 45px;
+    font-size: 24px;
+}
+
+.Create-post-required {
+    color: red;
+}
+
+.Create-button-container {
+    text-align: right;
+}
+
+.create-post-btn {
+    color: white;
+    width: 85px;
+    margin: 0 15px;
+    padding: 8px;
+    text-align: center;
+}
+
+.create-post-clear {
+    background-color: red;
+}
+
+.create-post-submit {
+    background-color: #28a745;
+}
