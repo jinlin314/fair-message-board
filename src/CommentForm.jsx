@@ -63,7 +63,7 @@ class CommentForm extends Component {
   render() {
     const valid = (this.state.message.length > 0 && this.state.author.length > 0);
     return (<div className="row Comment-form">
-      <div className="col-lg-10 col-md-10 col-sm-12">
+      <div className="col-lg-9 col-md-9 col-sm-12">
         <FormGroup
           controlId='commentMessage'
           validationState={this.validateNotEmpty(this.state.message)}
@@ -98,7 +98,7 @@ class CommentForm extends Component {
         </FormGroup>
       </div>
 
-      <div className="col-lg-2 col-md-2 col-sm-12 Comment-center">
+      <div className="col-lg-3 col-md-3 col-sm-12 Comment-center">
         <Button onClick={this.onSubmit} disabled={!valid} className='Post-btn Comment-reply'>
           Post reply
         </Button>

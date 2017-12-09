@@ -39,3 +39,4 @@ const postsReducer = (state = initialStates, action) => {
 }
 
 export default postsReducer;
+

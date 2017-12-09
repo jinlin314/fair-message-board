@@ -32,3 +32,21 @@
     height: 3px;
     border-top: dashed 1px #DE86D6;
 }
+
+.line-break2 {
+    height: 15px;
+    border-top: solid 2px #DE86D6;
+}
+
+
+@media only screen and (max-width: 765px) {
+    .Comment-hide-on-sm {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 766px) {
+    .Comment-hide-on-lg {
+        display: none;
+    }
+}

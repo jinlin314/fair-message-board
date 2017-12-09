@@ -33,14 +33,14 @@ class Post extends Component {
       <Well>
       <div className='Post-container container-fluid'>
         <div className='row'>
-          <div className='col-lg-10 col-md-10 col-sm-12'>
+          <div className='col-lg-9 col-md-9 col-sm-12'>
             <h2>{post.title}</h2>
             <h6>
               <span role='img' aria-label='writer'> ✍ </span>{post.author}
               <span className='Post-time'>On: {post.time}</span>
             </h6>
           </div>
-          <div className='col-lg-2 col-md-2 col-sm-12 Comment-center'>
+          <div className='col-lg-3 col-md-3 col-sm-12 Comment-center Comment-hide-on-sm'>
             <Link to='/posts'>
               <Button className='Post-btn Post-back'>
                 Back to posts
@@ -69,6 +69,15 @@ class Post extends Component {
           </div>
         </div>
         <CommentForm postKey={post.key} />
+
+        <div className='col-lg-12 col-md-12 col-sm-12 Comment-center Comment-hide-on-lg'>
+          <div className='line-break2'></div>
+          <Link to='/posts'>
+            <Button className='Post-btn Post-back'>
+              Back to posts
+            </Button>
+          </Link>
+        </div>
       </div>
       </Well>
     )

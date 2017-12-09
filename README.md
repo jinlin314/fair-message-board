@@ -1,6 +1,6 @@
 # Fairygodboss Message Board
 
-This is a simple message board, where your can view all the posts, create a new post, and comment on any post. It is built with React, React Router and React Redux. It used Boostrap and React-Boostrap to handle mobile responsiveness. The mobile breakpoint is at width of 525px. It is purely frontend, data will be wiped out on reload.
+This is a simple message board, where your can view all the posts, create a new post, and comment on any post. It is built with React, React Router and React Redux. It used Boostrap and React-Boostrap to handle mobile responsiveness. The mobile breakpoint is at width of '525px' & '765px'. It is purely frontend, data will be wiped out on reload.
 
 ## Getting Started
 
