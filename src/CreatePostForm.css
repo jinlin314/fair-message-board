@@ -1,6 +1,11 @@
-.CreatePostForm {
+.Create-post-form {
     padding: 45px;
-    font-size: 24px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.Create-post-header {
+    padding-bottom: 15px;
 }
 
 .Create-post-required {
@@ -14,7 +19,7 @@
 .create-post-btn {
     color: white;
     width: 85px;
-    margin: 0 15px;
+    margin: 0 10px;
     padding: 8px;
     text-align: center;
 }
@@ -25,4 +30,10 @@
 
 .create-post-submit {
     background-color: #28a745;
+}
+
+.Create-post-word-count {
+    font-size: 12px;
+    text-align: left;
+    padding-left: 5px;
 }

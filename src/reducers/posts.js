@@ -1,9 +1,10 @@
-import { GET_ALL_POSTS, CREATE_POST, GET_POST } from '../action-creators/posts';
+import { GET_ALL_POSTS, CREATE_POST, GET_POST, SUBMIT_COMMENT } from '../action-creators/posts';
 
 /* ------------------    REDUCER    --------------------- */
 const initialStates = {
   post: {},
-  posts: []
+  posts: [{key: '111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
+    {key: '222', title: 'second post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: [{author: 'jin', message: 'cccm'}]}]
 };
 
 export default (state = initialStates, action) => {
@@ -17,7 +18,19 @@ export default (state = initialStates, action) => {
       newState.posts.push(action.post);
       break;
     case GET_POST:
-      newState.post = action.post;
+      newState.posts.forEach(post => {
+        if (post.key === action.key) {
+          newState.post = post;
+        }
+      });
+      break;
+    case SUBMIT_COMMENT:
+      newState.posts.forEach(post => {
+        if (post.key === action.postKey) {
+          post.comments.push(action.comment);
+          newState.post = post;
+        }
+      });
       break;
 
     default:

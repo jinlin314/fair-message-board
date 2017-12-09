@@ -1,0 +1,19 @@
+.Comment-form {
+    border-top: solid 2px #DE86D6;
+    margin: 20px 0;
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+.Comment-center {
+    text-align: center;
+    margin: auto;
+}
+
+.Comment-reply {
+    background-color: #28a745;
+}
+
+.Post-comments-container {
+    padding: 10px 20px;
+}

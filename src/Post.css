@@ -1,0 +1,38 @@
+.Post-container {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.Post-time {
+    padding-left: 15px;
+}
+
+.Post-message {
+    padding: 20px 0;
+    border-bottom: dashed 1px #DE86D6;
+}
+
+.Post-btn {
+    color: white;
+    width: 120px;
+    margin: 0 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+.Post-back {
+    background-color: red;
+}
+
+.Post-comment-user {
+    font-weight: 600;
+}
+
+.Post-comment-message {
+
+}
+
+.line-break {
+    height: 3px;
+    border-top: dashed 1px #DE86D6;
+}

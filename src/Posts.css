@@ -1,0 +1,61 @@
+.Posts-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.Create-btn-container {
+    margin-bottom: 20px;
+    margin-right: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.Posts-container a:hover {
+    text-decoration: none !important;
+}
+
+.Create-post-button {
+    text-decoration: none;
+    background-color: #B333FF;
+    color: white;
+    width: 150px;
+    padding: 8px;
+    text-align: center;
+}
+
+.Posts-empty {
+    margin: auto;
+    margin-top: 18%;
+    text-align: center;
+    width: 90%;
+    font-size: 24px;
+}
+
+.Posts-post {
+    margin: 10px 0;
+}
+
+.Posts-comments {
+    border-bottom: 1px solid #000000;
+    margin-left: 30px;
+}
+
+.Posts-date {
+    position: absolute;
+    right: 20px;
+}
+
+@media only screen and (max-width: 525px) {
+    .Posts-date {
+        display: none;
+    }
+
+    .Create-btn-container {
+        margin-bottom: 20px;
+        margin-right: 60px;
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+    }
+}
