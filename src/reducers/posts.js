@@ -3,18 +3,10 @@ import { GET_ALL_POSTS, CREATE_POST, GET_POST, SUBMIT_COMMENT } from '../action-
 /* ------------------    REDUCER    --------------------- */
 const initialStates = {
   post: {},
-  // posts: [{key: '111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
-  //   {key: '222', title: 'second post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: [{author: 'jin', message: 'cccm'}]},
-  //   {key: '3111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
-  //   {key: '4111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
-  //   {key: '5111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
-  //   {key: '6111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
-  //   {key: '7111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []},
-  //   {key: '8111', title: 'first post', author: 'Jin', message: 'ajgfhsdjghfdsg', time: '12/8/2016 @ 1pm', comments: []}]
   posts:[]
 };
 
-export default (state = initialStates, action) => {
+const postsReducer = (state = initialStates, action) => {
   let newState = Object.assign({}, state);
 
   switch (action.type) {
@@ -45,3 +37,5 @@ export default (state = initialStates, action) => {
   }
   return newState;
 }
+
+export default postsReducer;

@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Navigation from './Navigation';
 import Posts from './Posts';
 import Post from './Post';
 import CreatePostForm from './CreatePostForm';
+import store from './store';
 
-
-export default class App extends Component {
-
-  render() {
-    return (
+export default (props) =>  {
+  return (
+    <Router>
       <div className='App'>
+        <Navigation/>
 
-          <Navigation/>
+        <Switch>
+          <Route exact path='/posts' component={Posts} store={store} />
+          <Route path='/posts/:id' component={Post} store={store} />
+          <Route path='/create-post' component={CreatePostForm} store={store} />
+          <Redirect from='/' to='/posts' />
 
-          <Switch>
-            <Route exact path='/posts' component={Posts} />
-            <Route path='/posts/:id' component={Post} />
-            <Route path='/create-post' component={CreatePostForm} />
-            <Redirect from='/' to='/posts' />
-          </Switch>
+        </Switch>
 
       </div>
-    );
-  }
+    </Router>
+  );
 }

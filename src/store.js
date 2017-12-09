@@ -7,6 +7,6 @@ const store = createStore(
   applyMiddleware(
     createLogger({collapsed: true})
   )
-)
+);
 
 export default store

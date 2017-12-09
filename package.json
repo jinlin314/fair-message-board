@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "jest-cli": "^21.2.1",
     "nodemon": "^1.12.5",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
