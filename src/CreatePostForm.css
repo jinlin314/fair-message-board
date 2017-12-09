@@ -1,6 +1,5 @@
 .Create-post-form {
     padding: 45px;
-    font-size: 18px;
     text-align: center;
 }
 
@@ -18,7 +17,7 @@
 
 .create-post-btn {
     color: white;
-    width: 85px;
+    width: 70px;
     margin: 0 10px;
     padding: 8px;
     text-align: center;
