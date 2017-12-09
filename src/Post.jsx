@@ -13,8 +13,15 @@ class Post extends Component {
       post: this.props.posts.post
     }
   }
-  componentWillMount() {
+  componentDidMount() {
     this.props.getPost(this.props.match.params.id);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.posts.post.key !== nextProps.posts.post.key) {
+      console.log("changed------")
+      this.setState({post: nextProps.posts.post});
+    }
   }
 
   render() {

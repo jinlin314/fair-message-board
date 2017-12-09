@@ -19,7 +19,9 @@ class CommentForm extends Component {
       author: this.state.author
     };
     this.props.submitComment(this.props.postKey, comment);
-    this.setState({message: '', author: ''})
+    this.setState({message: '', author: ''});
+    const div = document.getElementById("commentMessage");
+    div.focus();
   };
 
   onMessageChange = (event) => {
