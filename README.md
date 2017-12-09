@@ -17,6 +17,7 @@ npm install
 ```
 npm start
 ```
+* The app will be running on localhost:3000
 
 ## Running the tests
 
