@@ -22,7 +22,7 @@ class Posts extends Component {
 
     const createNewPost = (<div className="Create-btn-container">
       <Link to='/create-post'>
-        <Button className='Create-post-button'>Create New Post</Button>
+        <Button className='Create-post-button'>Create New <br />Post</Button>
       </Link>
     </div>);
 

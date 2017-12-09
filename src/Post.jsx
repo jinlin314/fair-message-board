@@ -19,7 +19,6 @@ class Post extends Component {
 
   componentWillReceiveProps(nextProps) {
     if(this.props.posts.post.key !== nextProps.posts.post.key) {
-      console.log("changed------")
       this.setState({post: nextProps.posts.post});
     }
   }
