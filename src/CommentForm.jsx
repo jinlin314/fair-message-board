@@ -79,7 +79,7 @@ class CommentForm extends Component {
             maxLength={256}
           />
           <FormControl.Feedback />
-          <div className="Create-post-word-count">{this.state.message.length}/1000</div>
+          <div className="Create-post-word-count">{this.state.message.length}/256</div>
         </FormGroup>
 
         <FormGroup
