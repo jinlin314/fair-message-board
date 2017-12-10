@@ -111,7 +111,7 @@ class CreatePostForm extends Component {
         >
           <ControlLabel>Message {required}</ControlLabel>
           <FormControl
-            style={{height: '150px'}}
+            style={{height: '220px'}}
             componentClass='textarea'
             value={this.state.message}
             placeholder='Enter Your Message Here'
